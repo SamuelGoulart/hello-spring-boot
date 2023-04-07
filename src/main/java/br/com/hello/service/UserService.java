@@ -5,12 +5,12 @@ import java.util.List;
 import br.com.hello.domain.User;
 
 public interface UserService {
-    User getById(long id);
+    User getById(int id);
     
     List<User> getAll();
     
     User create(User user);
     
-    void delete(long id);
+    void delete(int id);
 
 }

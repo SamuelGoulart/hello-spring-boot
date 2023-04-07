@@ -45,7 +45,7 @@ public class UserController {
 	}
 
 	@GetMapping("/user/{id}")
-	public ResponseEntity<ResponseBody> getCliente(@PathVariable long id) {
+	public ResponseEntity<ResponseBody> getCliente(@PathVariable int id) {
 		try {
 			return HttpResponse.ok("Usuário(a) listado com sucesso", userServiceImpl.getById(id));
 		} catch (Exception error) {
@@ -68,7 +68,7 @@ public class UserController {
 	}
 
 	@DeleteMapping("/user/{id}")
-	public ResponseEntity<ResponseBody> delete(@PathVariable long id) {
+	public ResponseEntity<ResponseBody> delete(@PathVariable int id) {
 		try {
 			User user = userServiceImpl.getById(id);
 			userServiceImpl.delete(user.getId());
