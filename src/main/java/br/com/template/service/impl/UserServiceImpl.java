@@ -18,10 +18,11 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	UserRepository userRepository;
 
-	public User getById(long id) {
+	public User getById(int id) {
 		Optional<User> optionalUser = userRepository.findById(id);
 
 		if (!optionalUser.isPresent()) {
+			System.out.println("AQUIIII");
 			throw new GenericException(Exceptions.USER_NOT_FOUND);
 		}
 
@@ -42,7 +43,7 @@ public class UserServiceImpl implements UserService {
 		return userRepository.save(user);
 	}
 
-	public void delete(long id) {
+	public void delete(int id) {
 		userRepository.deleteById(id);
 	}
 }
