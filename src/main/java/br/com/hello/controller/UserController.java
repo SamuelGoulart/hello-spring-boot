@@ -1,4 +1,4 @@
-package br.com.template.controller;
+package br.com.hello.controller;
 
 import javax.validation.Valid;
 
@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.template.domain.ResponseBody;
-import br.com.template.domain.User;
-import br.com.template.exception.Exceptions;
-import br.com.template.service.impl.UserServiceImpl;
-import br.com.template.util.HttpResponse;
+import br.com.hello.domain.ResponseBody;
+import br.com.hello.domain.User;
+import br.com.hello.exception.Exceptions;
+import br.com.hello.service.impl.UserServiceImpl;
+import br.com.hello.util.HttpResponse;
 import net.minidev.json.JSONArray;
 import net.minidev.json.JSONObject;
 

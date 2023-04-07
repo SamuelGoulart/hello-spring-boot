@@ -1,11 +1,11 @@
-package br.com.template.util;
+package br.com.hello.util;
 
 import java.util.ArrayList;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import br.com.template.domain.ResponseBody;
+import br.com.hello.domain.ResponseBody;
 import net.minidev.json.JSONArray;
 import net.minidev.json.JSONObject;
 

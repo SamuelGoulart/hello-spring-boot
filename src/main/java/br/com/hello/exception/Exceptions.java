@@ -1,4 +1,4 @@
-package br.com.template.exception;
+package br.com.hello.exception;
 
 
 public class Exceptions {

@@ -1,8 +1,8 @@
-package br.com.template.service;
+package br.com.hello.service;
 
 import java.util.List;
 
-import br.com.template.domain.User;
+import br.com.hello.domain.User;
 
 public interface UserService {
     User getById(long id);

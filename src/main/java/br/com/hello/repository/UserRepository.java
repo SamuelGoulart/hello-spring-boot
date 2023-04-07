@@ -1,8 +1,8 @@
-package br.com.template.repository;
+package br.com.hello.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import br.com.template.domain.User;
+import br.com.hello.domain.User;
 
 public interface UserRepository  extends JpaRepository<User, Long> {
 

@@ -1,4 +1,4 @@
-package br.com.template.service.impl;
+package br.com.hello.service.impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,11 +6,11 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.template.domain.User;
-import br.com.template.exception.Exceptions;
-import br.com.template.exception.GenericException;
-import br.com.template.repository.UserRepository;
-import br.com.template.service.UserService;
+import br.com.hello.domain.User;
+import br.com.hello.exception.Exceptions;
+import br.com.hello.exception.GenericException;
+import br.com.hello.repository.UserRepository;
+import br.com.hello.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {

@@ -1,4 +1,4 @@
-package br.com.template.exception;
+package br.com.hello.exception;
 
 public class GenericException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
