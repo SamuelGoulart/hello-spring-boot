@@ -49,8 +49,6 @@ public class UserController {
 		try {
 			return HttpResponse.ok("Usuário(a) listado com sucesso", userServiceImpl.getById(id));
 		} catch (Exception error) {
-			System.out.println("----------------");
-			System.out.println(error.getMessage());
 			switch (error.getMessage()) {
 			case Exceptions.USER_NOT_FOUND:
 				return HttpResponse.notFound(Exceptions.USER_NOT_FOUND);

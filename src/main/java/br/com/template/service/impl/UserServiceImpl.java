@@ -22,7 +22,6 @@ public class UserServiceImpl implements UserService {
 		Optional<User> optionalUser = userRepository.findById(id);
 
 		if (!optionalUser.isPresent()) {
-			System.out.println("AQUIIII");
 			throw new GenericException(Exceptions.USER_NOT_FOUND);
 		}
 
