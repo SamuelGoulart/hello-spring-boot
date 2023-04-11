@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ResponseBody {
-	public String menssage;
+	public String message;
     public Object payload;
     public ArrayList<?> error;
 }
