@@ -15,6 +15,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.format.annotation.NumberFormat;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -22,28 +23,29 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "tb_announcement")
-public class Announcement {
-	
+@Table(name = "tb_task")
+public class Task {
+
 	@Id
-	@Column(name="announcement_id")
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="announcement")
-	@SequenceGenerator(name="announcement",sequenceName="SQ_T_ANNOUNCEMENT",allocationSize=1)
-	private int announcementId;
+	@Column(name = "task_id")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "task")
+	@SequenceGenerator(name = "task", sequenceName = "SQ_T_TASK", allocationSize = 1)
+	private int taskId;
 	
+    @Column(name = "name", nullable = false)
+    @NotEmpty(message = "O campo name e obrigatório")
     @Size(min = 3, max = 80)
-    @NotEmpty(message = "O campo subject e obrigatório")
-	@Column(name="subject", nullable=false, length=80)
-	private String subject;
+    private String name;
     
     @Size(min = 3, max = 1000)
     @NotEmpty(message = "O campo description e obrigatório")
 	@Column(name="description", nullable=false, length=1000)
     private	String description; 
-	
-	@Column(name="payload", length=255)
-    private String payload;
-	
+  
+    @Column(name = "spots")
+    @NumberFormat
+    private String spots;
+    
     @CreationTimestamp
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name="created_at", nullable=false)
@@ -54,4 +56,5 @@ public class Announcement {
 	
 	@Column(name="delete_at")
     private Date deleteAt;
+
 }
