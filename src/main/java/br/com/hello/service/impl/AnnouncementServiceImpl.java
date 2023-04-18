@@ -9,9 +9,10 @@ import br.com.hello.domain.Announcement;
 import br.com.hello.exception.Exceptions;
 import br.com.hello.exception.GenericException;
 import br.com.hello.repository.AnnouncementRepository;
+import br.com.hello.service.AnnouncementService;
 
 @Service
-public class AnnouncementServiceImpl {
+public class AnnouncementServiceImpl implements AnnouncementService {
     
 	@Autowired
 	AnnouncementRepository announcementRepository;
