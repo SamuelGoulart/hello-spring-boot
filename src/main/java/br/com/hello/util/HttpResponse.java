@@ -14,7 +14,7 @@ public class HttpResponse {
 	public static ResponseEntity<ResponseBody> created(String message, Object payload) {
 		ResponseBody responseBody = new ResponseBody();
 		
-		responseBody.setMenssage(message);
+		responseBody.setMessage(message);
 		responseBody.setPayload(payload);
 		responseBody.setError(new ArrayList<>());
 		
@@ -31,7 +31,7 @@ public class HttpResponse {
 
 	    array.add(error);
 
-	    responseBody.setMenssage("Ops, parece que ocorreu um erro dentro dos nossos servidores");
+	    responseBody.setMessage("Ops, parece que ocorreu um erro dentro dos nossos servidores");
 	    responseBody.setPayload(new JSONObject());
 	    responseBody.setError(array);
 
@@ -43,7 +43,7 @@ public class HttpResponse {
 		ResponseBody responseBody = new ResponseBody();
 
 		
-		responseBody.setMenssage(message);
+		responseBody.setMessage(message);
 		responseBody.setError(new ArrayList<>());
 		responseBody.setPayload(payload);
 		
@@ -53,7 +53,7 @@ public class HttpResponse {
 	public static ResponseEntity<ResponseBody> notFound(String message, ArrayList<Object> error) {
 		ResponseBody responseBody = new ResponseBody();
 
-		responseBody.setMenssage(message);
+		responseBody.setMessage(message);
 		responseBody.setError(error);
 		responseBody.setPayload(new JSONObject());
 		
@@ -64,7 +64,7 @@ public class HttpResponse {
 	public static ResponseEntity<ResponseBody> notFound(String message) {
 		ResponseBody responseBody = new ResponseBody();
 
-		responseBody.setMenssage(message);
+		responseBody.setMessage(message);
 		responseBody.setPayload(new JSONObject());
 		responseBody.setError(new ArrayList<>());
 		
@@ -74,7 +74,7 @@ public class HttpResponse {
 	public static ResponseEntity<ResponseBody> badRequest(JSONArray errors) {
 		ResponseBody responseBody = new ResponseBody();
 
-	    responseBody.setMenssage("Ops! Ocorreram alguns erros de validação");
+	    responseBody.setMessage("Ops! Ocorreram alguns erros de validação");
 	    responseBody.setPayload(new JSONObject());
 		responseBody.setError(errors);
 		
