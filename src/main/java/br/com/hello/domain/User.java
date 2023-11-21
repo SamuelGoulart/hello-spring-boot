@@ -1,12 +1,14 @@
 package br.com.hello.domain;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -46,7 +48,7 @@ public class User {
     @Pattern(regexp = "^\\d{11}$")
 	private String phone;
     
-    @NotEmpty
+    @NotEmpty(message = "O campo password e obrigatório")
   	@Column(name="password")
 	private String password;
     
@@ -60,5 +62,4 @@ public class User {
   	
   	@Column(name="delete_at")
       private Date deleteAt;
-    
 }

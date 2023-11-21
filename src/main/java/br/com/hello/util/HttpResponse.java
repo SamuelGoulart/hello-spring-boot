@@ -80,4 +80,15 @@ public class HttpResponse {
 		
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(responseBody);
 	}
+	
+	public static ResponseEntity<ResponseBody> unauthorized(String message) {
+		ResponseBody responseBody = new ResponseBody();
+
+		
+		responseBody.setMessage(message);
+		responseBody.setError(new ArrayList<>());
+		responseBody.setPayload(new JSONObject());
+		
+		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(responseBody);
+	}
 }

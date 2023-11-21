@@ -16,7 +16,7 @@ public class TaskServiceImpl implements TaskService {
 
 	@Autowired
 	TaskRepository taskRepository;
-	
+
 	public List<Task> getAll() {
 		List<Task> tasks = taskRepository.findAll();
 		 
@@ -27,7 +27,7 @@ public class TaskServiceImpl implements TaskService {
 		return tasks;
 	}
 
-	public Task create(Task task) {
+	public Task create(Task task) {		
 		return taskRepository.save(task);
 	}
 
